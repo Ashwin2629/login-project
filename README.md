@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Space Theme Login Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .space-bg {
+    background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-box {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 0 15px orange;
+    text-align: center;
+  }
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: orange;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: none;
+  }
+  input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .forgot-password {
+    display: block;
+    margin: 10px 0 20px;
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .social-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .google-btn {
+    background-color: white;
+    color: #444;
+    box-shadow: 0 0 5px #aaa;
+    border: 1px solid #ddd;
+  }
+  .microsoft-btn {
+    background: #2F2F2F;
+    box-shadow: 0 0 8px #555;
+  }
+  .social-btn svg {
+    height: 18px;
+    width: 18px;
+  }
+</style>
+</head>
+<body>
+  <div class="space-bg">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username or Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+        <a class="forgot-password" href="#">Forgot Password?</a>
+      </form>
+      <div class="social-login">
+        <!-- Google Button with correct G logo -->
+        <button class="social-btn google-btn" onclick="alert('Google sign in clicked')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18">
+            <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.6h13.2c-.6 3-2.3 5.6-4.9 7.3v6h7.9c4.6-4.3 7.3-10.6 7.3-17.4z"/>
+            <path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.7l-7.9-6c-2.2 1.5-5.1 2.3-8.1 2.3-6.2 0-11.4-4.2-13.3-9.9h-8v6.2C7.7 42.9 15.2 48 24 48z"/>
+            <path fill="#FBBC05" d="M10.7 28.7c-.5-1.5-.7-3.1-.7-4.7s.2-3.2.7-4.7v-6.2h-8C1.6 16.4 1 20.1 1 24s.6 7.6 1.7 10.9l8-6.2z"/>
+            <path fill="#EA4335" d="M24 9.5c3.6 0 6.9 1.2 9.5 3.5l7.1-7.1C36 1.9 30.5 0 24 0 15.2 0 7.7 5.1 3.7 12.9l8 6.2c1.9-5.7 7.1-9.9 12.3-9.9z"/>
+          </svg>
+          Google
+        </button>
+
+        <!-- Microsoft Button -->
+        <button class="social-btn microsoft-btn" onclick="alert('Microsoft sign in clicked')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" 
+               alt="Microsoft logo" style="height:18px; width:18px;" />
+          Microsoft
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
